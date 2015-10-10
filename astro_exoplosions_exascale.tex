@@ -1,0 +1,135 @@
+\documentclass[11pt]{article}
+
+\usepackage{mathpazo}
+
+\usepackage[margin=1in]{geometry}
+
+\begin{document}
+
+\begin{center}
+{\sffamily \bfseries \large Modeling Astrophysical Explosions with Sustained Exascale Computing} \\
+Michael Zingale (Stony Brook)
+\end{center}
+
+Our understanding of stars and their fates is based on coupling
+observations to theoretical models.  Unlike laboratory physicists, we
+cannot perform experiments on stars (e.g.\ tweaking the energy
+generation or setting two stars on a collison course), but rather must
+patiently take what nature provides to us.  Simulation offers a means
+of virtual experimentation, enabling a detailed understanding of the
+most violent ongoing explosions in the Universe---the death of stars.
+
+Stars can explode in a surprising variety of means, driven by either
+nuclear energy or gravitational potential energy release.  The
+explosion can consume the entire star (or binary systems) or just
+surface layers.  Exotic remnants, like neutron stars or blackholes, or
+simply nothing can be left behind.  Stellar explosions are critically
+important sources of nucleosynthesis---for example, all of the iron in
+the Universe results from these explosions, enriching the interstellar
+medium in heavy elements.  Some explosions also have parallels to
+terrestrial combustion.
+
+Astrophysics has been at the forefront of high-performance computing
+for decades, with simulations of supernovae explosions being one of
+the prime foci.  Both DOE (including the national laboratories) and
+NSF have supported the development and application of simulation codes
+to stellar explosions.  Many successes have been met, but there are
+still great uncertainties in the mechanisms of core collapse
+supernovae (the death of massive stars) and thermonuclear supernovae
+(the explosion of compact white dwarf stars).  Astronomy is also
+entering the ``big data'' era, with survey telescopes like LSST coming
+online toward the end of the decade that will greatly expand
+observations of astrophysical transients.  It would not be surprising
+for entire new classes of transients to be found.
+
+The standard practice in stellar astrophysics is to describe the star
+as a fluid and use domain decomposition to divide the work across
+computational nodes.  Ideally, shared memory parallelism is used
+within a node, reducing memory overheads.  Work on exploiting
+accelerators (GPUs and Phi processors) is underway for many codes, and
+standard technologies (MPI, OpenMP, and OpenACC) promise to allow for
+portability.
+
+Current successes
+
+
+\paragraph*{What can we do with 100$\times$ the computing power}
+
+Fluid flows are chaotic, and a range of instabilities and turbulence
+are ever present in our models of exploding stars.  It was only
+recently that simulations switched from being predominantly
+two-dimensional to three-dimensional---enabled by the large increasing
+in computing power over the last decade.  The goal of extant
+simulations is to understand the feasibility of different theoretical
+models for explosions and to probe the physics of the explosion
+mechanism itself.  However, the range of length and timescales in
+stars that can be captured through simulation is a small fraction of
+the true scales in stars.  This means that approximations are made
+either explicitly (through the introduction of subgrid scale models)
+or implicitly (having a numerical dissipation that operates on much
+large scales than nature would have).  The common way to test these
+approximations is to do convergence studies, where the resolution of a
+simulation is changed (over at most a decade) seeking convergence of
+the qualitative results.  A looming question though is whether this is
+some resolution, yet unobtainable, where the nature of the solution
+will change qualitatively.  The promised increase in computing power
+will allow for a much greater range in lengthscales to be modeled.
+
+The increase in computer time also allows for an expansion of the
+physics modeled.  Today, small nuclear reaction networks ($\sim$
+10--20 nuclei) are used, which approximately capture the energetics of
+the flow, but are unable to make detailed predictions of the
+nucleosynthetic yields.  Additional pieces, like radiation transport
+are crudely approximated (if modeled at all).  The increase in
+computational power will allow for more realistic physics throughout.
+
+
+
+\paragraph*{Impacts}
+
+
+
+
+\paragraph*{Capabilities needed.}  Computational fluid dynamics requires 
+high performance interconnects, as nearest neighbor (or global)
+communication is needed each timestep.  This means that traditional
+supercomputers are required over simple clusters.  A major challenge
+with the increase in simulation size is the analysis of the data.  In
+situ data analysis will need to take on a bigger role in the future---many
+of the pieces for this are coming into place.
+
+Manytimes, the targeted use of supercomputing resources is using a
+significant fraction of the machine for ``hero'' calculations.
+However, science often needs capacity computing---many parameter
+studies of the system help us understand the robustness of our models.
+Going forward, there is a need for both capacity and leadership-class
+computing centers.
+
+
+\paragraph*{Foundational issues (training, workforce, collaborative environments).}
+
+Developing, maintaining, and supporting simulation codes takes
+considerable effort, and often this work does is not given the same
+recognition and rewards as the scientific results themselves.  This
+puts the code developers, especially those early in their careers, at
+a competitive disadvantage. Increased support for code development and
+community support through the traditional grant process would greatly
+help to capitalize on code investments.  Open source codes also greatly
+help amortize the costs of code development, and enable (and
+encourage) reproducibility of results, a hallmark of science.  The
+astrophysics community does a reasonable job in making codes available, and
+incentive structures should be setup to further encourage this.
+
+A further difficulty is that awards of computer time don't come with
+monetary support for the researchers who will run and analyse the
+simulations, and grants don't come with a guarantee of computer time,
+so there is a chicken-and-egg prospect, and a necessity of having to
+have both in place independently to make the best use of either
+resource.
+
+Argonne computer summer school is a great example of the type of training program we
+need going forward.
+
+
+
+\end{document}
