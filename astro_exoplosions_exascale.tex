@@ -24,19 +24,18 @@ patiently take what nature allows us to observe.  Simulation offers a means
 of virtual experimentation, enabling a detailed understanding of the
 most violent ongoing explosions in the Universe---the death of stars.
 
-Stars can explode in a surprising variety of means, driven by either
-nuclear energy or gravitational potential energy release.  The
-explosion can consume the entire star (or binary systems) or just
+Stars can explode in a surprising variety of ways, driven by either
+nuclear or gravitational potential energy release.  The
+explosion can consume the entire star (or stars) or just
 surface layers.  Exotic remnants, like neutron stars or black holes, or
 simply nothing can be left behind.  Stellar explosions are critically
 important sources of nucleosynthesis---for example, all of the iron in
 the Universe results from these explosions, enriching the interstellar
-medium in heavy elements.  Some explosions also have parallels to
-terrestrial combustion.
+medium in heavy elements. 
 
 Astrophysics has been at the forefront of high-performance computing
 for decades, with simulations of supernovae explosions being one of
-the prime foci.  Both DOE (including the national laboratories) and
+the prime foci.  Both DOE (including the national labs) and
 NSF have supported the development and application of simulation codes
 to stellar explosions.  Many successes have been met, but there are
 still great uncertainties in the mechanisms of core collapse
@@ -47,12 +46,14 @@ online toward the end of the decade that will greatly expand
 observations of astrophysical transients, perhaps finding entire new
 classes.
 
-Cutting edge research in stellar astrophysics is being done with
-both large multidimensional simulations, demanding large core counts,
-as well as suites of one-dimensional evolutionary simulations with
-exceptionally detailed microphysics.  The interplay between these
-two paths is critical to building up a physical picture of stellar
-explosions, and each has unique computational demands.
+Cutting edge research in stellar astrophysics is being done with both
+large multidimensional simulations, demanding large core counts, as
+well as suites of one-dimensional evolutionary simulations with
+exceptionally detailed microphysics.  The interplay between these two
+paths is critical to building up a physical picture of stellar
+explosions, and each has unique (and increasing) computational
+demands.  For brevity, we focus here on examples from
+multi-dimensional work.
 
 The standard practice in stellar astrophysics is to describe the star
 as a fluid and use domain decomposition to divide the work across
@@ -126,12 +127,13 @@ scientistis, who can take their training to other disiplinces.
 
 
 \paragraph*{Capabilities needed.}  Computational fluid dynamics requires 
-high performance interconnects, as nearest neighbor (or global)
-communication is needed each timestep.  This means that traditional
-supercomputers are required over simple clusters.  A major challenge
-with the increase in simulation size is the analysis of the data.  In
-situ data analysis will need to take on a bigger role in the future---many
-of the pieces for this are coming into place.
+high performance interconnects, as nearest neighbor (and global for
+some physics) communication is needed each timestep.  This means that
+traditional supercomputers are required over simple clusters.  A major
+challenge with the increase in simulation size is the analysis of the
+data (100s of TB per simulation).  In situ data analysis will need to
+take on a bigger role in the future---many of the pieces for this are
+coming into place.
 
 Many times, the targeted use of supercomputing resources is using a
 significant fraction of the machine for ``hero'' calculations.
