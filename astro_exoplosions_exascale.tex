@@ -1,4 +1,4 @@
-\documentclass[11pt]{article}
+\documentclass[11pt,twocolumn]{article}
 
 \usepackage{mathpazo}
 
@@ -44,8 +44,15 @@ supernovae (the death of massive stars) and thermonuclear supernovae
 (the explosion of compact white dwarf stars).  Astronomy is also
 entering the ``big data'' era, with survey telescopes like LSST coming
 online toward the end of the decade that will greatly expand
-observations of astrophysical transients.  It would not be surprising
-for entire new classes of transients to be found.
+observations of astrophysical transients, perhaps finding entire new
+classes.
+
+Cutting edge research in stellar astrophysics is being done with
+both large multidimensional simulations, demanding large core counts,
+as well as suites of one-dimensional evolutionary simulations with
+exceptionally detailed microphysics.  The interplay between these
+two paths is critical to building up a physical picture of stellar
+explosions, and each has unique computational demands.
 
 The standard practice in stellar astrophysics is to describe the star
 as a fluid and use domain decomposition to divide the work across
@@ -55,7 +62,6 @@ accelerators (GPUs and Phi processors) is underway for many codes, and
 standard technologies (MPI, OpenMP, and OpenACC) promise to allow for
 portability.
 
-Current successes
 An example of a ``success" in computational astrophysics is the
 enormous progress made over the last decade in understanding 
 thermonuclear (type Ia) supernovae. Large-scale simulation 
@@ -63,31 +69,33 @@ allowed exploration of a variety of progenitor systems and
 explosion mechanisms, allowing researcher to address not
 just the question of a successful explosion, but deeper issues such
 as systematic effects on the brightness of an event and explanations
-for unusual or outlying events.
+for unusual or outlying events.  These simulations require the
+interaction of many different researchers and simulation codes
+capable of modeling the different phases.
 
-\paragraph*{What can we do with 100$\times$ the computing power}
+\paragraph*{Increasing computing power.}
 
-An increase of 100$\times$ in computing power and the corresponding
-increase in memory will allow capability simulations at unprecedented
-fidelity. Fluid flows are chaotic, and a range of instabilities and 
-turbulence are ever present in our models of exploding stars. It 
-was only recently that simulations switched from being predominantly
-two-dimensional to three-dimensional---enabled by the large increasing
-in computing power over the last decade.  The goal of extant
-simulations is to understand the feasibility of different theoretical
-models for explosions and to probe the physics of the explosion
-mechanism itself.  However, the range of length and timescales in
-stars that can be captured through simulation is a small fraction of
-the true scales in stars.  This means that approximations are made
-either explicitly (through the introduction of subgrid scale models)
-or implicitly (having a numerical dissipation that operates on much
-large scales than nature would have).  The common way to test these
-approximations is to do convergence studies, where the resolution of a
-simulation is changed (over at most a decade) seeking convergence of
-the qualitative results.  A looming question though is whether this is
-some resolution, yet unobtainable, where the nature of the solution
-will change qualitatively.  The promised increase in computing power
-will allow for a much greater range in length scales to be modeled.
+An increase of 100$\times$ in computing power will allow capability
+simulations at unprecedented fidelity. Fluid flows are chaotic, and a
+range of instabilities and turbulence are ever present in our models
+of exploding stars. It was only recently that simulations switched
+from being predominantly two-dimensional to
+three-dimensional---enabled by the large increasing in computing power
+over the last decade.  The goal of extant simulations is to understand
+the feasibility of different theoretical models for explosions and to
+probe the physics of the explosion mechanism itself.  However, the
+range of length and timescales in stars that can be captured through
+simulation is a small fraction of the true scales in stars.  This
+means that approximations are made either explicitly (through the
+introduction of subgrid scale models) or implicitly (having a
+numerical dissipation that operates on much large scales than nature
+would have).  The common way to test these approximations is to do
+convergence studies, where the resolution of a simulation is changed
+(over at most a decade) seeking convergence of the qualitative
+results.  A looming question though is whether this is some
+resolution, yet unobtainable, where the nature of the solution will
+change qualitatively.  The promised increase in computing power will
+allow for a much greater range in length scales to be modeled.
 
 The increase in computer time also will allow for an expansion of the
 physics modeled.  Today, small nuclear reaction networks ($\sim$
@@ -103,12 +111,18 @@ to perform many times the present volume of production simulations.
 In astrophysics, this increase will allow suites of simulations 
 investigate the sensitivity of events on both model and physical
 parameters, enabling formal uncertainty quantification at 
-unprecedented levels.
+unprecedented levels.  This is true of both the multi-dimensional
+and one-dimensional simulations.
 
-\paragraph*{Impacts} In addition to answering questions about the 
-astrophysics, research into modeling astrophysical explosions
-at the exascale will significantly impact many fields of science 
-that address multi-scale, multi-physics applications. 
+\paragraph*{Impacts.} In addition to answering questions about the 
+astrophysics, research into modeling astrophysical explosions at the
+exascale will significantly impact many fields of science that address
+multi-scale, multi-physics applications.  The simulation codes
+developed for these problems have application to terrestial combustion
+phenomena, climate and atmospherical flows, and applications related
+to the DOE laboratory interests.  Importantly, this research provides
+an excellent training group for the next generation of computational
+scientistis, who can take their training to other disiplinces.
 
 
 \paragraph*{Capabilities needed.}  Computational fluid dynamics requires 
@@ -127,7 +141,7 @@ Going forward, there is a need for both capacity and leadership-class
 computing centers.
 
 
-\paragraph*{Foundational issues (training, workforce, collaborative environments).}
+\paragraph*{Foundational issues.}
 
 Developing, maintaining, and supporting simulation codes takes
 considerable effort, and often this work does is not given the same
@@ -144,12 +158,13 @@ incentive structures should be setup to further encourage this.
 A further difficulty is that awards of computer time don't come with
 monetary support for the researchers who will run and analyze the
 simulations, and grants don't come with a guarantee of computer time,
-so there is a chicken-and-egg prospect, and a necessity of having to
+so there is a chicken-and-egg problem, and a necessity of having to
 have both in place independently to make the best use of either
 resource.
 
-Argonne computer summer school is a great example of the type of training program we
-need going forward.
+Finally, continued support for summer schools to train students is
+essential (the Argonne Training Program on Extreme-Scale Computing is
+an excellent example).
 
 
 
