@@ -34,9 +34,8 @@ Stars can explode in a surprising variety of ways, driven by either
 nuclear or gravitational potential energy release.  The
 explosion can consume the entire star (or stars) or just
 surface layers, and exotic remnants, like neutron stars or black holes
-can be left behind.  Regardless of whether or not a compact object
-remains, stellar explosions are critically important sources of 
-nucleosynthesis, which enriches the interstellar medium in heavy elements. 
+can be left behind.  Stellar explosions are critically important sources of 
+nucleosynthesis, and enrich the interstellar medium in heavy elements. 
 All of the iron in the Universe, for example, was synthesized in 
 stellar explosions.
 
@@ -49,9 +48,9 @@ to stellar explosions.  Many successes have been met, but there are
 still great uncertainties in the mechanisms of core collapse
 supernovae (the death of massive stars) and thermonuclear supernovae
 (the explosion of compact white dwarf stars).  Astronomy is also
-very much a growing part of the ``big data'' era, with survey telescopes 
+entering the ``big data'' era, with survey telescopes 
 like LSST coming online toward the end of the decade that will greatly 
-expand observations of astrophysical transients, perhaps finding entire 
+expand observations of astrophysical transients, likely finding entire 
 new classes to be understood.
 
 Cutting edge research in stellar astrophysics is being done with both
@@ -66,7 +65,7 @@ needs for multi-dimensional work.
 The standard practice in stellar astrophysics is to describe the star
 as a fluid and use domain decomposition to divide the work across
 computational nodes.  Ideally, shared memory parallelism is used
-within a node, reducing memory overheads, and message passing is used 
+within a node, reducing the memory overhead, and message passing is used 
 across nodes.  Work on exploiting accelerators (GPUs and Phi processors) 
 is underway for many codes, and standard technologies (OpenMP, 
 OpenACC, and MPI) allow portability.
@@ -107,7 +106,7 @@ for the same qualitative behavior) can test our assumptions, but
 looming question is whether there is some resolution, yet
 unobtainable, where the nature of the solution will change
 qualitatively.  The promised increase in computing power will allow
-for a much greater range in length scales to be modeled.
+for a much greater range of length scales to be modeled.
 
 The increase in computer time also will allow for an expansion of the
 physics modeled.  Today, small nuclear reaction networks ($\sim$
@@ -131,7 +130,7 @@ astrophysics, research into modeling astrophysical explosions at the
 exascale will significantly impact many fields of science that address
 multi-scale, multi-physics applications.  The simulation codes
 developed for these problems have application to terrestrial combustion
-phenomena, climate and atmosphere models, DOE laboratory interests.
+phenomena, climate and atmosphere models, and DOE laboratory interests.
 Importantly, this research provides an excellent training ground for
 the next generation of computational scientists, who can take their
 training to other disciplines (and industry).
@@ -160,31 +159,33 @@ whole.
 
 \paragraph*{Foundational issues.}
 
-The progress in our field is driving not just by increased FLOPS, but
+The progress in our field is driven not just by increased FLOPS, but
 also through innovative new algorithms.  Developing, maintaining, and
 supporting simulation codes takes considerable effort, crossing
 interdisciplinary lines (with coordination between domain scientists,
 mathematicians, and computational scientists).  Funding mechanisms
-need to recognize this interdisciplinary nature of computation.  A
-further issue is that often code development work is not given the
-same recognition and rewards as the scientific results themselves.
-This puts the code developers, especially those early in their
-careers, at a competitive disadvantage.  Perceptions of the role of
-code work will need to adapt.  Finally, increased support for code
-development and community support through the traditional grant
-process would greatly help to capitalize on code investments.  Open
-source codes also greatly help amortize the costs of code development,
-and enable (and encourage) reproducibility of results, a hallmark of
-science.  The astrophysics community does a reasonable job in making
-codes available, and incentive structures should be setup to further
-encourage this.
+need to recognize this interdisciplinary nature of computation (for
+example, as done with the SciDAC program).  
 
-Another complication is that awards of computer time don't come with
-monetary support for the researchers who will run and analyze the
-simulations, and grants don't come with a guarantee of computer time.
-This is something of a ``chicken-and-egg" problem as it is necessary
-to have both in place independently to make the effective use of 
-either resource.
+A further issue is that
+often code development work is not given the same recognition and
+rewards as the scientific results themselves.  This puts the code
+developers, especially those early in their careers, at a competitive
+disadvantage.  Perceptions of the role of code work will need to
+adapt.  Finally, increased support for code development and community
+support through the traditional grant process would greatly help to
+capitalize on code investments.  Open source codes also greatly help
+amortize the costs of code development, and enable (and encourage)
+reproducibility of results, a hallmark of science.  The astrophysics
+community does a reasonable job in making codes available, and
+incentive structures should be setup to further encourage this.
+
+Awards of computer time don't come with monetary support for the
+researchers who will run and analyze the simulations, and grants don't
+come with a guarantee of computer time.  This is something of a
+``chicken-and-egg" problem, as it is necessary to have both in place
+independently to make the effective use of either resource.  Mechanisms
+linking the two could be developed.
 
 Finally, continued support for training of students is essential. The
 Argonne Training Program on Extreme-Scale Computing is an excellent
