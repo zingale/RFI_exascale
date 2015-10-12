@@ -58,10 +58,10 @@ multi-dimensional work.
 The standard practice in stellar astrophysics is to describe the star
 as a fluid and use domain decomposition to divide the work across
 computational nodes.  Ideally, shared memory parallelism is used
-within a node, reducing memory overheads.  Work on exploiting
-accelerators (GPUs and Phi processors) is underway for many codes, and
-standard technologies (MPI, OpenMP, and OpenACC) promise to allow for
-portability.
+within a node, reducing memory overheads, and MPI is used across
+nodes.  Work on exploiting accelerators (GPUs and Phi processors) is
+underway for many codes, and standard technologies (MPI, OpenMP, and
+OpenACC) promise to allow for portability.
 
 An example of a success in our field is enormous progress made over
 the last decades in understanding thermonuclear (type Ia) supernovae.
@@ -76,7 +76,7 @@ events.  Recently three-dimensional progenitor models (of both types
 of supernovae) become feasible, greatly increasing our understanding
 of the initial conditions to the explosion.  These simulations require
 the interaction of many different researchers and simulation codes
-capable of modeling the different phases.
+capable of modeling the different phases.  
 
 \paragraph*{Increasing computing power.}
 
@@ -149,6 +149,8 @@ computing centers.
 
 \paragraph*{Foundational issues.}
 
+The progress in our field is driving not just by increased FLOPS,
+but also through innovative new algorithms.
 Developing, maintaining, and supporting simulation codes takes
 considerable effort, and often this work does is not given the same
 recognition and rewards as the scientific results themselves.  This
