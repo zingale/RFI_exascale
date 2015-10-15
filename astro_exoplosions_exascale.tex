@@ -10,12 +10,22 @@
 
 \usepackage[para]{footmisc}
 
+
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \rhead{\footnotesize \sffamily Modeling Astrophysical Explosions with Sustained Exascale Computing}
 \setlength\headsep{10pt}
 
 \renewcommand*{\thefootnote}{\fnsymbol{footnote}}
+
+\renewcommand\floatpagefraction{.9}
+\renewcommand\topfraction{.9}
+\renewcommand\bottomfraction{.9}
+\renewcommand\textfraction{.1}   
+\setcounter{totalnumber}{50}
+\setcounter{topnumber}{50}
+\setcounter{bottomnumber}{50}
+
 
 \begin{document}
 
@@ -24,16 +34,19 @@
 \begin{center}
 {\sffamily \bfseries Modeling Astrophysical Explosions with Sustained 
                      Exascale Computing\footnotemark[1]} \\
-{\sffamily\small
-Michael Zingale\footnotemark[2], 
-Alan Calder\footnotemark[2], 
-Frank Timmes\footnotemark[3]
+{\small
+M.~Zingale\footnotemark[2]\footnotemark[5], 
+A.~C.~Calder\footnotemark[2], 
+C.~M.~Malone\footnotemark[3],
+\& F.~X.~Timmes\footnotemark[4]
 }
 \end{center}
 %
-\footnotetext[1]{Response to the RFI on {\em Science Drivers Requiring Capable Exascale High Performance Computing}, NOT-GM-15-122}
+\footnotetext[1]{Response to RFI NOT-GM-15-122: {\em Science Drivers Requiring Capable Exascale High Performance Computing}}
 \footnotetext[2]{Stony Brook University}
-\footnotetext[3]{Arizona State University}
+\footnotetext[3]{Los Alamos National Laboratory}
+\footnotetext[4]{Arizona State University}
+\footnotetext[5]{michael.zingale@stonybrook.edu}
 
 Our understanding of stars and their fates is based on coupling
 observations to theoretical models.  Unlike laboratory physicists, we
@@ -104,20 +117,20 @@ capable of modeling the different phases.
 An increase of 100$\times$ in computing power will allow for
 simulations at unprecedented fidelity. Fluid flows are chaotic, and a
 range of instabilities and turbulence are ever present in models of
-exploding stars. It was only recently that simulations switched from
-being predominantly two-dimensional to three-dimensional---enabled by
-the large increase in computing power over the last decade.  The goal
-of extant simulations is to understand the feasibility of different
-theoretical models for explosions and to probe the physics of the
-explosion mechanism itself.  However, the range of length and time
-scales that can be captured through simulation is a small fraction of
-the true scales in stars.  This means that approximations are made
-either explicitly (through the introduction of subgrid scale models)
-or implicitly (having a numerical dissipation that operates on much
-large scales than nature would have).  Convergence studies (changing
-the resolution and hoping for the same qualitative behavior) can test
-our assumptions, but the looming question is whether there is some
-resolution, yet unobtainable, where the qualitative nature of the
+exploding stars. The goal of extant simulations is to understand the
+feasibility of different theoretical models for explosions and to
+probe the physics of the explosion mechanism itself.  It was only
+recently that simulations switched from being predominantly
+two-dimensional to three-dimensional---enabled by the large increase
+in computing power over the last decade.  However, the range of length
+and time scales that can be captured through simulation is a small
+fraction of the true scales in stars.  This means that approximations
+are made either explicitly (by introducing subgrid scale
+models) or implicitly (having a numerical dissipation that operates on
+much large scales than nature would have).  Convergence studies
+(changing the resolution and seeking the same qualitative behavior)
+can test our assumptions, but the looming question is whether there is
+some resolution, yet unobtainable, where the qualitative nature of the
 solution will change.  The promised increase in computing power will
 allow for a much greater range of length scales to be modeled.
 
@@ -174,12 +187,12 @@ whole.
 \paragraph*{Foundational issues.}
 
 The progress in our field is driven not just by increased FLOPS, but
-also through innovative new algorithms.  Developing, maintaining, and
+also through algorithmic innovations.  Developing, maintaining, and
 supporting simulation codes takes considerable effort, crossing
 interdisciplinary lines (with coordination between domain scientists,
 mathematicians, and computational scientists).  Funding mechanisms
-need to recognize this interdisciplinary nature of computation (for
-example, as done with the SciDAC program).
+need to recognize and support interdisciplinary work (for
+example, as with the SciDAC program).
 
 A further issue is that
 often code development work is not given the same recognition and
